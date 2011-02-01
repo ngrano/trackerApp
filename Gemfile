@@ -31,3 +31,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
