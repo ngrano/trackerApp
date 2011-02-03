@@ -1,6 +1,12 @@
 TrackerApp::Application.routes.draw do
   devise_for :users
 
+  namespace :api do
+    namespace :v1 do
+      resources :locations, :only => :create
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
