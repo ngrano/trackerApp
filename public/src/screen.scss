@@ -1,0 +1,74 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "base";
+
+#bg {
+@include linear-gradient(color-stops(white, #dddddd));
+	min-height: 1080px;
+}
+body {
+	margin: 0 auto;
+	text-align:center;
+}
+form {
+	width:430px;
+	margin:0 auto;
+}
+.field {
+	width:430px;
+}
+.narrow-field {
+	width:300px;
+	margin-left:133px;
+	float:left;
+	margin-top:20px;
+}
+label, input { 
+	float: left;
+	font-family: $basic_font;
+}
+p {
+	font-family: $basic_font;
+}
+label{
+	display: block;
+    	line-height: 50px;
+    	margin-right: 4px;
+    	width: 130px;
+}
+.terms {
+	width:250px;
+	display:block;
+	line-height:26px;
+}
+.cancel {
+	padding: 0 10px;}
+input {
+	width:285px;
+	height:40px;
+	margin-top: 6px;
+	padding-left:5px;
+	font-size:18px;
+
+}
+
+input[type="checkbox"] {	
+	width:20px;
+	height:14px;
+}
+input[type="submit"] {
+	width:100px;
+	font-size:14px;
+}
+img {
+	padding-top:200px;
+}
+span {color:#fff;}
+.dblue {background-color: $Track_darkblue;}
+.blue {background-color: $Track_blue;}
+.green {background-color: $Track_green;}
+.red {background-color: $Track_red;}
+.black {background-color: $Track_black;}
