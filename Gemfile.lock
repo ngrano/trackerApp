@@ -31,6 +31,8 @@ GEM
     arel (2.0.7)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
+    compass (0.10.6)
+      haml (>= 3.0.4)
     database_cleaner (0.6.1)
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
@@ -41,6 +43,7 @@ GEM
     factory_girl_rails (1.0.1)
       factory_girl (~> 1.3)
       railties (>= 3.0.0)
+    haml (3.0.25)
     i18n (0.5.0)
     mail (2.2.14)
       activesupport (>= 2.3.6)
@@ -82,6 +85,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass (>= 0.10.6)
   database_cleaner
   devise
   factory_girl_rails
