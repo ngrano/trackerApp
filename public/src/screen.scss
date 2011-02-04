@@ -13,6 +13,12 @@ body {
 	margin: 0 auto;
 	text-align:center;
 }
+#header {
+	margin:0 0 20px 0;
+	}
+#content {
+	margin: 0 auto;	
+}
 form {
 	width:430px;
 	margin:0 auto;
@@ -26,11 +32,27 @@ form {
 	float:left;
 	margin-top:20px;
 }
-label, input { 
-	float: left;
+p {
 	font-family: $basic_font;
 }
-p {
+
+h1 {
+	 color: #37383F;
+	 font-family: $basic_font;
+	 font-size: 14pt;
+	 margin: 40px 0 0 120px;
+}
+a {
+	font-weight:bold;
+	color: #2d3070;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #2d3070;
+}
+label, input { 
+	float: left;
 	font-family: $basic_font;
 }
 label{
@@ -40,7 +62,7 @@ label{
     	width: 130px;
 }
 .terms {
-	width:250px;
+	width:270px;
 	display:block;
 	line-height:26px;
 }
@@ -54,9 +76,44 @@ input {
 	font-size:18px;
 
 }
-
+.button{
+	display: block;
+	font-family: $basic_font;
+	font-size: 12pt;
+	float:left;
+	width: 120px;
+	height: 40px;
+	line-height: 42px;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid #2d3070;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#5e63bd));
+	background-image: -moz-linear-gradient(#989eff, #5e63bd);
+	color: #2d3070;
+	text-shadow: 1px 1px 2px #fff;
+	-moz-box-shadow: 2px 2px 3px #ccc;
+	-webkit-box-shadow: 2px 2px 3px #ccc;
+	box-shadow: 2px 2px 3px #ccc;
+}
+.button:hover{
+	float:left;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#989eff));
+	background-image: -moz-linear-gradient(#989eff, #989eff);
+	text-shadow: none;
+}
+.button:active, .button:focus {
+	float:left;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#5e63bd), to(#5e63bd));
+	background-image: -moz-linear-gradient(#5e63bd, #5e63bd);
+	text-shadow:none;
+	border: 2px solid #000;
+	color: #181a3d;
+}
 input[type="checkbox"] {	
-	width:20px;
+	width:18px;
 	height:14px;
 }
 input[type="submit"] {

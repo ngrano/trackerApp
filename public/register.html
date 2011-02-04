@@ -17,38 +17,43 @@
 		<span class="red">Red</span>
 		<span class="black">Black</span>
 	-->
-		<img src="images/logo.png" class="logo" />
-	  	<form action="index.html" method="post">
+		<div id="header">
+			<img src="images/logo.png" class="logo" />
+			<h1> Already registered? <a href="index.html"> Log in </a> </h1>
+	  	</div>
+		<div id="content">
+		  	<form action="index.html" method="post">
 
-		    <div class="field">
-			<label for="name">Name</label>
-			<input type="text" name="name" id="name"></input>
-		    </div>
-		    <div class="field">
-			<label for="email">Email</label>
-			<input type="text" name="email" id="email"></input>
-		    </div>
-		    <div class="field">
-			<label for="email2">Email(again)</label>
-			<input type="text" name="email2" id="email2"></input>
-		    </div>
-                    <div class="field">
-			<label for="password">Password</label>
-			<input type="password" name="password" id="password"></input>
-		    </div>
-		    <div class="field">
-			<label for="password2">Password(again)</label>
-			<input type="password" name="password2" id="password2"></input>
-		    </div>
-		    <div class="narrow-field">
-		    	<input type="checkbox" name="terms" id="terms"></input>
-			<label class="terms" for="terms">I Accept terms and conditions</label>
-		    </div>
-		    <div class="narrow-field">
-			<input type="submit" value="Register" id="submit"></input>
-			<label for="submit"> or <a class="cancel" href="#" >Cancel</a></label>
-		    </div>
-	  	</form>	
+			    <div class="field">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name"></input>
+			    </div>
+			    <div class="field">
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email"></input>
+			    </div>
+			    <div class="field">
+				<label for="email2">Email(again)</label>
+				<input type="text" name="email2" id="email2"></input>
+			    </div>
+		            <div class="field">
+				<label for="password">Password</label>
+				<input type="password" name="password" id="password"></input>
+			    </div>
+			    <div class="field">
+				<label for="password2">Password(again)</label>
+				<input type="password" name="password2" id="password2"></input>
+			    </div>
+			    <div class="narrow-field">
+			    	<input type="checkbox" name="terms" id="terms"></input>
+				<label class="terms">I Accept <a href="terms.txt" target="_blank">terms and conditions</a></label>
+			    </div>
+			    <div class="narrow-field">
+				<a class="button" href="#" id="submit">Register</a>
+				<label for="submit"> or <a class="cancel" href="#" >Cancel</a></label>
+			    </div>
+		  	</form>	
+		</div>
 	</div>
 </body>
 </html> 	

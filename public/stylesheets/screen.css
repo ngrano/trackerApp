@@ -77,17 +77,27 @@ body {
 }
 
 /* line 16, ../src/screen.scss */
+#header {
+  margin: 0 0 20px 0;
+}
+
+/* line 19, ../src/screen.scss */
+#content {
+  margin: 0 auto;
+}
+
+/* line 22, ../src/screen.scss */
 form {
   width: 430px;
   margin: 0 auto;
 }
 
-/* line 20, ../src/screen.scss */
+/* line 26, ../src/screen.scss */
 .field {
   width: 430px;
 }
 
-/* line 23, ../src/screen.scss */
+/* line 29, ../src/screen.scss */
 .narrow-field {
   width: 300px;
   margin-left: 133px;
@@ -95,18 +105,38 @@ form {
   margin-top: 20px;
 }
 
-/* line 29, ../src/screen.scss */
+/* line 35, ../src/screen.scss */
+p {
+  font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
+}
+
+/* line 39, ../src/screen.scss */
+h1 {
+  color: #37383F;
+  font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
+  font-size: 14pt;
+  margin: 40px 0 0 120px;
+}
+
+/* line 45, ../src/screen.scss */
+a {
+  font-weight: bold;
+  color: #2d3070;
+  text-decoration: none;
+}
+
+/* line 51, ../src/screen.scss */
+a:visited {
+  color: #2d3070;
+}
+
+/* line 54, ../src/screen.scss */
 label, input {
   float: left;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 33, ../src/screen.scss */
-p {
-  font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
-}
-
-/* line 36, ../src/screen.scss */
+/* line 58, ../src/screen.scss */
 label {
   display: block;
   line-height: 50px;
@@ -114,19 +144,19 @@ label {
   width: 130px;
 }
 
-/* line 42, ../src/screen.scss */
+/* line 64, ../src/screen.scss */
 .terms {
-  width: 250px;
+  width: 270px;
   display: block;
   line-height: 26px;
 }
 
-/* line 47, ../src/screen.scss */
+/* line 69, ../src/screen.scss */
 .cancel {
   padding: 0 10px;
 }
 
-/* line 49, ../src/screen.scss */
+/* line 71, ../src/screen.scss */
 input {
   width: 285px;
   height: 40px;
@@ -135,49 +165,91 @@ input {
   font-size: 18px;
 }
 
-/* line 58, ../src/screen.scss */
+/* line 79, ../src/screen.scss */
+.button {
+  display: block;
+  font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
+  font-size: 12pt;
+  float: left;
+  width: 120px;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #2d3070;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#5e63bd));
+  background-image: -moz-linear-gradient(#989eff, #5e63bd);
+  color: #2d3070;
+  text-shadow: 1px 1px 2px #fff;
+  -moz-box-shadow: 2px 2px 3px #ccc;
+  -webkit-box-shadow: 2px 2px 3px #ccc;
+  box-shadow: 2px 2px 3px #ccc;
+}
+
+/* line 101, ../src/screen.scss */
+.button:hover {
+  float: left;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#989eff));
+  background-image: -moz-linear-gradient(#989eff, #989eff);
+  text-shadow: none;
+}
+
+/* line 107, ../src/screen.scss */
+.button:active, .button:focus {
+  float: left;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5e63bd), to(#5e63bd));
+  background-image: -moz-linear-gradient(#5e63bd, #5e63bd);
+  text-shadow: none;
+  border: 2px solid #000;
+  color: #181a3d;
+}
+
+/* line 115, ../src/screen.scss */
 input[type="checkbox"] {
-  width: 20px;
+  width: 18px;
   height: 14px;
 }
 
-/* line 62, ../src/screen.scss */
+/* line 119, ../src/screen.scss */
 input[type="submit"] {
   width: 100px;
   font-size: 14px;
 }
 
-/* line 66, ../src/screen.scss */
+/* line 123, ../src/screen.scss */
 img {
   padding-top: 200px;
 }
 
-/* line 69, ../src/screen.scss */
+/* line 126, ../src/screen.scss */
 span {
   color: #fff;
 }
 
-/* line 70, ../src/screen.scss */
+/* line 127, ../src/screen.scss */
 .dblue {
   background-color: #37383f;
 }
 
-/* line 71, ../src/screen.scss */
+/* line 128, ../src/screen.scss */
 .blue {
   background-color: #5e63bd;
 }
 
-/* line 72, ../src/screen.scss */
+/* line 129, ../src/screen.scss */
 .green {
   background-color: #56a869;
 }
 
-/* line 73, ../src/screen.scss */
+/* line 130, ../src/screen.scss */
 .red {
   background-color: #c86464;
 }
 
-/* line 74, ../src/screen.scss */
+/* line 131, ../src/screen.scss */
 .black {
   background-color: #2e2e2e;
 }

@@ -17,20 +17,25 @@
 		<span class="red">Red</span>
 		<span class="black">Black</span>
 	-->
-		<img src="images/logo.png" class="logo" />
-	  	<form action="index.html" method="post">
-		    <div class="field">
-			<label for="user">Username</label>
-			<input type="text" name="user" id="user"></input>
-		    </div>
-		    <div class="field">
-			<label for="pwd">Password</label>
-			<input type="password" name="pwd" id="pwd"></input>
-		    </div>
-		    <div class="narrow-field">
-			<input type="submit" value="Login"></input>
-		    </div>
-	  	</form>	
+		<div id="header">
+			<img src="images/logo.png" class="logo" />
+			<h1> Please Log in or <a href="register.html"> Register </a> </h1>
+	  	</div>
+		<div id="content">
+			<form action="index.html" method="post">
+			    <div class="field">
+				<label for="user">Username</label>
+				<input type="text" name="user" id="user"></input>
+			    </div>
+			    <div class="field">
+				<label for="pwd">Password</label>
+				<input type="password" name="pwd" id="pwd"></input>
+			    </div>
+			    <div class="narrow-field">
+				<a class="button" href="#" name="submit" id="submit">Login</a>
+			    </div>
+		  	</form>
+		</div>	
 	</div>
 </body>
 </html>
