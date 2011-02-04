@@ -1,24 +1,66 @@
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
+color palette:
+
+$Track_darkblue
+$Track_blue
+$Track_green
+$Track_red
+$Track_black
+
+*/
 
 @import "base";
 
-#bg {
-@include linear-gradient(color-stops(white, #dddddd));
-	min-height: 1080px;
-}
 body {
 	margin: 0 auto;
 	text-align:center;
 }
+#bg {
+@include linear-gradient(color-stops(white, #dddddd));
+	min-height: 1080px;
+}
 #header {
 	margin:0 0 20px 0;
 	}
+#logo-area {
+	width:550px;
+	min-height:200px;
+	float:left;
+}
+#search-area {
+	width:200px;
+	min-height:200px;
+	float:left;
+	margin:40px 0px 0px 270px;
+}
 #content {
 	margin: 0 auto;	
 }
+#main-area {
+	float:left;
+	width:700px;
+	min-height:800px;
+	margin: 40px 60px 0 60px;
+}
+#friends-area{
+	float:left;
+	width:200px;
+	min-height:800px;
+	margin-top:40px;
+	text-align:left;
+}
+	.friend {
+	width:200px;
+	padding: 5px 0;
+	line-height: 30px;
+	}
+
+	.status {
+	float:left;
+	padding-right: 10px;}
 form {
 	width:430px;
 	margin:0 auto;
@@ -32,24 +74,28 @@ form {
 	float:left;
 	margin-top:20px;
 }
+.logo-drop {
+	padding-top:200px;
+}
 p {
 	font-family: $basic_font;
 }
 
 h1 {
-	 color: #37383F;
+	 color: $Track_darkblue;
 	 font-family: $basic_font;
 	 font-size: 14pt;
 	 margin: 40px 0 0 120px;
+}
+.quote {
+	color: #cccccc;
+	font-family: $basic_font;
+	font-size:10pt;
 }
 a {
 	font-weight:bold;
 	color: #2d3070;
 	text-decoration: none;
-}
-a:visited
-{
-	color: #2d3070;
 }
 label, input { 
 	float: left;
@@ -120,12 +166,3 @@ input[type="submit"] {
 	width:100px;
 	font-size:14px;
 }
-img {
-	padding-top:200px;
-}
-span {color:#fff;}
-.dblue {background-color: $Track_darkblue;}
-.blue {background-color: $Track_blue;}
-.green {background-color: $Track_green;}
-.red {background-color: $Track_red;}
-.black {background-color: $Track_black;}

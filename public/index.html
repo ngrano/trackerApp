@@ -6,35 +6,36 @@
 	<link rel="stylesheet" href="./stylesheets/print.css" />
 	
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>Compass index.html</title>
+	<title>Compass Main view</title>
 </head>
 <body>
 	<div id="bg">
-	<!--
-		<span class="dblue">Dark</span>
-		<span class="blue">Blue</span>
-		<span class="green">Green</span>
-		<span class="red">Red</span>
-		<span class="black">Black</span>
-	-->
 		<div id="header">
-			<img src="images/logo.png" class="logo" />
-			<h1> Please Log in or <a href="register.html"> Register </a> </h1>
+			<div id="logo-area">
+				<img src="images/logo.png"/>
+				<p class="quote"> "Track or be tracked, but do it with TrackerApp." </p>
+			</div>
+			<div id="search-area">
+				
+				<form action="index.html" method="post">
+				
+			    <div class="field">
+				<input type="text" name="search" value="Search"></input>
+			    </div>
+			</div>
 	  	</div>
 		<div id="content">
-			<form action="index.html" method="post">
-			    <div class="field">
-				<label for="user">Username</label>
-				<input type="text" name="user" id="user"></input>
-			    </div>
-			    <div class="field">
-				<label for="pwd">Password</label>
-				<input type="password" name="pwd" id="pwd"></input>
-			    </div>
-			    <div class="narrow-field">
-				<a class="button" href="#" name="submit" id="submit">Login</a>
-			    </div>
-		  	</form>
+			<div id="main-area">
+				<img src="images/map.png" alt="map" />
+			</div>
+			<div id="friends-area">	
+				<div class="friend">
+					<a href="#"><img src="images/online.png" alt="status" class="status" /></a> <p>online friend</p>
+				</div>
+				<div class="friend">
+					<a href="#"><img src="images/offline.png" alt="status" class="status" /></a><p>offline friend</p>
+				</div>
+			</div>
 		</div>	
 	</div>
 </body>

@@ -1,7 +1,16 @@
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
+color palette:
+
+$Track_darkblue
+$Track_blue
+$Track_green
+$Track_red
+$Track_black
+
+*/
 /* line 14, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -62,7 +71,13 @@ a img {
   border: none;
 }
 
-/* line 8, ../src/screen.scss */
+/* line 17, ../src/screen.scss */
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 21, ../src/screen.scss */
 #bg {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
   background-image: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%);
@@ -70,34 +85,73 @@ a img {
   min-height: 1080px;
 }
 
-/* line 12, ../src/screen.scss */
-body {
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* line 16, ../src/screen.scss */
+/* line 25, ../src/screen.scss */
 #header {
   margin: 0 0 20px 0;
 }
 
-/* line 19, ../src/screen.scss */
+/* line 28, ../src/screen.scss */
+#logo-area {
+  width: 550px;
+  min-height: 200px;
+  float: left;
+}
+
+/* line 33, ../src/screen.scss */
+#search-area {
+  width: 200px;
+  min-height: 200px;
+  float: left;
+  margin: 40px 0px 0px 270px;
+}
+
+/* line 39, ../src/screen.scss */
 #content {
   margin: 0 auto;
 }
 
-/* line 22, ../src/screen.scss */
+/* line 42, ../src/screen.scss */
+#main-area {
+  float: left;
+  width: 700px;
+  min-height: 800px;
+  margin: 40px 60px 0 60px;
+}
+
+/* line 48, ../src/screen.scss */
+#friends-area {
+  float: left;
+  width: 200px;
+  min-height: 800px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+/* line 55, ../src/screen.scss */
+.friend {
+  width: 200px;
+  padding: 5px 0;
+  line-height: 30px;
+}
+
+/* line 61, ../src/screen.scss */
+.status {
+  float: left;
+  padding-right: 10px;
+}
+
+/* line 64, ../src/screen.scss */
 form {
   width: 430px;
   margin: 0 auto;
 }
 
-/* line 26, ../src/screen.scss */
+/* line 68, ../src/screen.scss */
 .field {
   width: 430px;
 }
 
-/* line 29, ../src/screen.scss */
+/* line 71, ../src/screen.scss */
 .narrow-field {
   width: 300px;
   margin-left: 133px;
@@ -105,38 +159,45 @@ form {
   margin-top: 20px;
 }
 
-/* line 35, ../src/screen.scss */
+/* line 77, ../src/screen.scss */
+.logo-drop {
+  padding-top: 200px;
+}
+
+/* line 80, ../src/screen.scss */
 p {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 39, ../src/screen.scss */
+/* line 84, ../src/screen.scss */
 h1 {
-  color: #37383F;
+  color: #37383f;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
   font-size: 14pt;
   margin: 40px 0 0 120px;
 }
 
-/* line 45, ../src/screen.scss */
+/* line 90, ../src/screen.scss */
+.quote {
+  color: #cccccc;
+  font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
+  font-size: 10pt;
+}
+
+/* line 95, ../src/screen.scss */
 a {
   font-weight: bold;
   color: #2d3070;
   text-decoration: none;
 }
 
-/* line 51, ../src/screen.scss */
-a:visited {
-  color: #2d3070;
-}
-
-/* line 54, ../src/screen.scss */
+/* line 100, ../src/screen.scss */
 label, input {
   float: left;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 58, ../src/screen.scss */
+/* line 104, ../src/screen.scss */
 label {
   display: block;
   line-height: 50px;
@@ -144,19 +205,19 @@ label {
   width: 130px;
 }
 
-/* line 64, ../src/screen.scss */
+/* line 110, ../src/screen.scss */
 .terms {
   width: 270px;
   display: block;
   line-height: 26px;
 }
 
-/* line 69, ../src/screen.scss */
+/* line 115, ../src/screen.scss */
 .cancel {
   padding: 0 10px;
 }
 
-/* line 71, ../src/screen.scss */
+/* line 117, ../src/screen.scss */
 input {
   width: 285px;
   height: 40px;
@@ -165,7 +226,7 @@ input {
   font-size: 18px;
 }
 
-/* line 79, ../src/screen.scss */
+/* line 125, ../src/screen.scss */
 .button {
   display: block;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
@@ -189,7 +250,7 @@ input {
   box-shadow: 2px 2px 3px #ccc;
 }
 
-/* line 101, ../src/screen.scss */
+/* line 147, ../src/screen.scss */
 .button:hover {
   float: left;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#989eff));
@@ -197,7 +258,7 @@ input {
   text-shadow: none;
 }
 
-/* line 107, ../src/screen.scss */
+/* line 153, ../src/screen.scss */
 .button:active, .button:focus {
   float: left;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#5e63bd), to(#5e63bd));
@@ -207,49 +268,14 @@ input {
   color: #181a3d;
 }
 
-/* line 115, ../src/screen.scss */
+/* line 161, ../src/screen.scss */
 input[type="checkbox"] {
   width: 18px;
   height: 14px;
 }
 
-/* line 119, ../src/screen.scss */
+/* line 165, ../src/screen.scss */
 input[type="submit"] {
   width: 100px;
   font-size: 14px;
-}
-
-/* line 123, ../src/screen.scss */
-img {
-  padding-top: 200px;
-}
-
-/* line 126, ../src/screen.scss */
-span {
-  color: #fff;
-}
-
-/* line 127, ../src/screen.scss */
-.dblue {
-  background-color: #37383f;
-}
-
-/* line 128, ../src/screen.scss */
-.blue {
-  background-color: #5e63bd;
-}
-
-/* line 129, ../src/screen.scss */
-.green {
-  background-color: #56a869;
-}
-
-/* line 130, ../src/screen.scss */
-.red {
-  background-color: #c86464;
-}
-
-/* line 131, ../src/screen.scss */
-.black {
-  background-color: #2e2e2e;
 }
