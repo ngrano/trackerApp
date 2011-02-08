@@ -28,4 +28,21 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  before_save :generate_api_key
+
+  def generate_api_key
+    if self.email_changed?
+      self[:apikey] = Digest::SHA1.hexdigest(self[:email])
+    end
+  end
+
+  def name=(first_and_last_names)
+    parts = first_and_last_names.split(/\s+/)
+
+    if parts && parts.length > 1
+      self[:first_name] = parts[0]
+      self[:last_name] = parts[1..-1].join(' ')
+    end
+  end
 end
