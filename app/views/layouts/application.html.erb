@@ -7,7 +7,6 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<% content_for :header do %>
 	<div id="bg">
 		<div id="header">
 			<div id="logo-area">
@@ -25,8 +24,5 @@
 			<%=yield %> 	
 		</div>	
 	</div>
-<% end %>
-
-<%= yield :header %>
 </body>
 </html>
