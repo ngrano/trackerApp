@@ -27,12 +27,11 @@ body {
 	}
 #logo-area {
 	width:550px;
-	min-height:200px;
+	min-height:150px;
 	float:left;
 }
 #search-area {
 	width:200px;
-	min-height:200px;
 	float:left;
 	margin:40px 0px 0px 270px;
 }
@@ -75,7 +74,7 @@ form {
 	margin-top:20px;
 }
 .logo-drop {
-	padding-top:200px;
+	padding-top:150px;
 }
 p {
 	font-family: $basic_font;
@@ -103,7 +102,7 @@ label, input {
 }
 label{
 	display: block;
-    	line-height: 50px;
+    	line-height: 52px;
     	margin-right: 4px;
     	width: 130px;
 }

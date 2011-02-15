@@ -7,8 +7,36 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<% content_for :main do %>
+	<div id="bg">
+		<div id="header">
+			<div id="logo-area">
+				<img src="images/logo.png"/>
+				<p class="quote"> "Track or be tracked, but do it with TrackerApp." </p>
+			</div>
+			<div id="search-area">
+				<form action="index.html" method="post">
+				    <div class="field">
+					<input type="text" name="search" value="Search"></input>
+				    </div>
+			</div>
+	  	</div>
+		<div id="content">
+			<div id="main-area">
+				<img src="images/map.png" alt="map" />
+			</div>
+			<div id="friends-area">	
+				<div class="friend">
+					<a href="#"><img src="images/online.png" class="status" /></a> <p>online friend</p>
+				</div>
+				<div class="friend">
+					<a href="#"><img src="images/offline.png" class="status" /></a><p>offline friend</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+<% end %>
 
-<%= yield %>
-
+<%= yield :main %>
 </body>
 </html>
