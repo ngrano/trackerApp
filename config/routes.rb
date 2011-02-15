@@ -1,5 +1,5 @@
 TrackerApp::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :sessions => "users/sessions" }
   resources :users
 
   namespace :api do
