@@ -7,7 +7,7 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<% content_for :main do %>
+<% content_for :header do %>
 	<div id="bg">
 		<div id="header">
 			<div id="logo-area">
@@ -22,21 +22,11 @@
 			</div>
 	  	</div>
 		<div id="content">
-			<div id="main-area">
-				<img src="images/map.png" alt="map" />
-			</div>
-			<div id="friends-area">	
-				<div class="friend">
-					<a href="#"><img src="images/online.png" class="status" /></a> <p>online friend</p>
-				</div>
-				<div class="friend">
-					<a href="#"><img src="images/offline.png" class="status" /></a><p>offline friend</p>
-				</div>
-			</div>
+			<%yield :content %> 	
 		</div>	
 	</div>
 <% end %>
 
-<%= yield :main %>
+<%= yield :header %>
 </body>
 </html>
