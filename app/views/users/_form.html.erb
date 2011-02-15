@@ -9,7 +9,7 @@
     </ul>
   </div>
   <% end %>
-
+<form>
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
@@ -30,7 +30,8 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </div>
-  <div class="actions">
+  <div class="narrow-field">
     <%= f.submit %>
   </div>
+</form>
 <% end %>
