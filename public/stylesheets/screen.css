@@ -75,118 +75,155 @@ a img {
 body {
   margin: 0 auto;
   text-align: center;
-}
-
-/* line 21, ../src/screen.scss */
-#bg {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
   background-image: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%);
   background-image: linear-gradient(top, #ffffff 0%, #dddddd 100%);
   min-height: 1080px;
 }
 
-/* line 25, ../src/screen.scss */
+/* line 23, ../src/screen.scss */
 #wrapper {
-  width: 1060px;
+  margin: 0 auto;
+  width: 1160px;
 }
 
-/* line 28, ../src/screen.scss */
+/* line 27, ../src/screen.scss */
 #header {
-  margin-top: 20px;
+  margin-top: 0 auto;
 }
 
-/* line 31, ../src/screen.scss */
+/* line 30, ../src/screen.scss */
 .logo-area {
   width: 550px;
   min-height: 150px;
   float: left;
 }
 
-/* line 36, ../src/screen.scss */
+/* line 35, ../src/screen.scss */
 .search-area {
   width: 200px;
   float: left;
   margin: 40px 0px 0px 270px;
 }
 
-/* line 41, ../src/screen.scss */
+/* line 40, ../src/screen.scss */
 #content {
-  margin: 0 auto;
-  width: 900px;
+  width: 1160px;
   min-height: 800px;
   float: left;
+  margin-top: 100px;
 }
 
-/* line 47, ../src/screen.scss */
+/* line 46, ../src/screen.scss */
 #main-area {
   float: left;
   margin: 40px 60px 0 60px;
 }
 
-/* line 51, ../src/screen.scss */
+/* line 50, ../src/screen.scss */
 #friends-area {
   float: left;
-  width: 200px;
-  margin-top: 40px;
+  margin: 40px 0 0 90px;
   text-align: left;
 }
 
-/* line 57, ../src/screen.scss */
+/* line 55, ../src/screen.scss */
 .friend {
   width: 200px;
   padding: 5px 0;
   line-height: 30px;
 }
 
-/* line 63, ../src/screen.scss */
+/* line 61, ../src/screen.scss */
 .status {
   float: left;
   padding-right: 10px;
 }
 
-/* line 69, ../src/screen.scss */
+/* line 65, ../src/screen.scss */
+.field {
+  margin-top: 20px;
+  text-align: right;
+  width: 710px;
+}
+
+/* line 70, ../src/screen.scss */
+.form {
+  width: 1160px;
+  margin-top: 50px;
+}
+
+/* line 74, ../src/screen.scss */
+.narrow {
+  width: 1160px;
+}
+
+/* line 77, ../src/screen.scss */
 p {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 73, ../src/screen.scss */
-h1 {
-  color: #37383f;
+/* line 80, ../src/screen.scss */
+h1, h2 {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
-  font-size: 14pt;
 }
 
-/* line 78, ../src/screen.scss */
+/* line 84, ../src/screen.scss */
+h1 {
+  color: #37383f;
+  font-size: 18pt;
+  margin-bottom: 20px;
+}
+
+/* line 89, ../src/screen.scss */
+h2 {
+  color: #cccccc;
+  font-size: 12pt;
+}
+
+/* line 93, ../src/screen.scss */
 .quote {
   color: #cccccc;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
   font-size: 10pt;
 }
 
-/* line 83, ../src/screen.scss */
+/* line 98, ../src/screen.scss */
+.grey {
+  color: #cccccc;
+  font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
+}
+
+/* line 102, ../src/screen.scss */
 a {
   font-weight: bold;
   color: #2d3070;
   text-decoration: none;
 }
 
-/* line 88, ../src/screen.scss */
+/* line 107, ../src/screen.scss */
 label, input {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 107, ../src/screen.scss */
-.button {
-  display: block;
-  font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
-  font-size: 12pt;
-  float: left;
-  width: 120px;
-  height: 40px;
-  line-height: 42px;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #2d3070;
+/* line 110, ../src/screen.scss */
+label {
+  padding-right: 10px;
+}
+
+/* line 114, ../src/screen.scss */
+input[type="text"], input[type="password"] {
+  height: 35px;
+}
+
+/* line 118, ../src/screen.scss */
+input[type="checkbox"] {
+  width: 18px;
+  height: 14px;
+}
+
+/* line 122, ../src/screen.scss */
+input[type="submit"] {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -197,34 +234,12 @@ label, input {
   -moz-box-shadow: 2px 2px 3px #ccc;
   -webkit-box-shadow: 2px 2px 3px #ccc;
   box-shadow: 2px 2px 3px #ccc;
-}
-
-/* line 129, ../src/screen.scss */
-.button:hover {
-  float: left;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#989eff));
-  background-image: -moz-linear-gradient(#989eff, #989eff);
-  text-shadow: none;
-}
-
-/* line 135, ../src/screen.scss */
-.button:active, .button:focus {
-  float: left;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5e63bd), to(#5e63bd));
-  background-image: -moz-linear-gradient(#5e63bd, #5e63bd);
-  text-shadow: none;
-  border: 2px solid #000;
-  color: #181a3d;
-}
-
-/* line 143, ../src/screen.scss */
-input[type="checkbox"] {
-  width: 18px;
-  height: 14px;
-}
-
-/* line 147, ../src/screen.scss */
-input[type="submit"] {
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #2d3070;
+  line-height: 42px;
   width: 100px;
-  font-size: 14px;
+  font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
+  font-size: 12pt;
+  height: 40px;
 }

@@ -17,16 +17,15 @@ $Track_black
 body {
 	margin: 0 auto;
 	text-align:center;
-}
-#bg {
-@include linear-gradient(color-stops(white, #dddddd));
+	@include linear-gradient(color-stops(white, #dddddd));
 	min-height: 1080px;
 }
 #wrapper {
-	width: 1060px;
+	margin: 0 auto;
+	width: 1160px;
 }
 #header {
-	margin-top: 20px;
+	margin-top: 0 auto;
 }
 .logo-area {
 	width:550px;
@@ -39,10 +38,10 @@ body {
 	margin:40px 0px 0px 270px;
 }
 #content {
-	margin: 0 auto;	
-	width: 900px;
+	width: 1160px;
 	min-height: 800px;
 	float:left;
+	margin-top: 100px;
 }
 #main-area {
 	float:left;
@@ -50,8 +49,7 @@ body {
 }
 #friends-area{
 	float:left;
-	width:200px;
-	margin-top:40px;
+	margin: 40px 0 0 90px;
 	text-align:left;
 }
 	.friend {
@@ -64,21 +62,42 @@ body {
 	float:left;
 	padding-right: 10px;
 	}
-.center {}
-
+.field {
+	margin-top: 20px;
+    	text-align: right;
+   	width: 710px;
+}
+.form {
+	width: 1160px;
+	margin-top: 50px;
+}
+.narrow {
+	width: 1160px;
+}
 p {
+	font-family: $basic_font;
+}
+h1,h2 {
 	font-family: $basic_font;
 }
 
 h1 {
-	 color: $Track_darkblue;
-	 font-family: $basic_font;
-	 font-size: 14pt;
+	color: $Track_darkblue;
+	font-size: 18pt;
+	margin-bottom: 20px;
+}
+h2 {
+	color: $grey;
+	font-size: 12pt;
 }
 .quote {
-	color: #cccccc;
+	color: $grey;
 	font-family: $basic_font;
 	font-size:10pt;
+}
+.grey {
+	color: $grey;
+	font-family: $basic_font;
 }
 a {
 	font-weight:bold;
@@ -88,33 +107,19 @@ a {
 label, input { 
 	font-family: $basic_font;
 }
+label {
+	padding-right:10px;
+}
 
+input[type="text"], input[type="password"] {
+	height:35px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.button{
-	display: block;
-	font-family: $basic_font;
-	font-size: 12pt;
-	float:left;
-	width: 120px;
-	height: 40px;
-	line-height: 42px;
-	text-align: center;
-	text-decoration: none;
-	border: 2px solid #2d3070;
+input[type="checkbox"] {	
+	width:18px;
+	height:14px;
+}
+input[type="submit"] {
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
@@ -125,26 +130,12 @@ label, input {
 	-moz-box-shadow: 2px 2px 3px #ccc;
 	-webkit-box-shadow: 2px 2px 3px #ccc;
 	box-shadow: 2px 2px 3px #ccc;
-}
-.button:hover{
-	float:left;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#989eff));
-	background-image: -moz-linear-gradient(#989eff, #989eff);
-	text-shadow: none;
-}
-.button:active, .button:focus {
-	float:left;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#5e63bd), to(#5e63bd));
-	background-image: -moz-linear-gradient(#5e63bd, #5e63bd);
-	text-shadow:none;
-	border: 2px solid #000;
-	color: #181a3d;
-}
-input[type="checkbox"] {	
-	width:18px;
-	height:14px;
-}
-input[type="submit"] {
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid #2d3070;
+	line-height: 42px;
 	width:100px;
-	font-size:14px;
+	font-family: $basic_font;
+	font-size: 12pt;
+	height:40px;
 }

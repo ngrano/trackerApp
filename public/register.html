@@ -9,7 +9,6 @@
 	<title>Register</title>
 </head>
 <body>
-	<div id="bg">
 		<div id="wrapper">
 			<div id="header">
 				<div class="logo-area">
@@ -18,14 +17,15 @@
 				</div>
 				<div class="search-area">
 					<form action="index.html" method="post">
-					    <div class="field">
-						<input type="text" name="search" value="Search"></input>
-					    </div>
+					    
+						<input type="text" name="search" class="grey" value="Search"></input>
+					    
 				</div>
 		  	</div>
 			<div id="content">
-				<h1> Already registered? <a href="login.html"> Log in here </a> </h1>
-			  	<div class="centered">
+				<h1> Register </h1>
+				<h2> Already registered? <a href="login.html"> Log in here </a> </h2>
+			  	<div class="form">
 					<form action="index.html" method="post">
 					    <div class="field">
 						<label for="name">Name</label>
@@ -47,19 +47,20 @@
 						<label for="password2">Password (again)</label>
 						<input type="password" name="password2" id="password2"></input>
 					    </div>
-					    <div class="narrow-field">
+					<div class="narrow">
+					    <div class="field">
 					    	<input type="checkbox" name="terms" id="terms"></input>
 						<label class="terms">I Accept <a href="terms.txt" target="_blank">terms and conditions</a></label>
 					    </div>
-					    <div class="narrow-field">
-						<a class="button" href="#" id="submit">Register</a>
-						<label for="submit"> or <a class="cancel" href="#" >Cancel</a></label>
-					    </div>
+					    <div class="field">				
+						<input type="submit" id="submit" value="Register"></input>
+						<label for="submit"> or <a class="cancel" href="#">Cancel</a></label>
+					</div>
+					</div>
 			  		</form>
 				</div>	
 			</div>
 		</div>	
-	</div>
 </body>
 </html> 	
 

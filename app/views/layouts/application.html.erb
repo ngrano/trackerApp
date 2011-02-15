@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
 <head>
   <title>TrackerApp</title>
   <%= stylesheet_link_tag :all %>
@@ -7,19 +7,18 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	<div id="bg">
+	<div id="wrapper">
 		<div id="header">
-			<div id="logo-area">
-				<img src="/images/logo.png"/>
+			<div class="logo-area">
+				<img src="images/logo.png" alt="logo" />
 				<p class="quote"> "Track or be tracked, but do it with TrackerApp." </p>
 			</div>
-			<div id="search-area">
-				<form action="index.html" method="post">
-				    <div class="field">
-					<input type="text" name="search" value="Search"></input>
-				    </div>
+			<div class="search-area">
+				<form action="login.html" method="post">
+					<input type="text" class="grey" value="Search"></input>
+				</form>
 			</div>
-	  	</div>
+		</div>
 		<div id="content">
 			<%=yield %> 	
 		</div>	
