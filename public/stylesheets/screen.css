@@ -93,24 +93,23 @@ body {
 /* line 28, ../src/screen.scss */
 #logo-area {
   width: 550px;
-  min-height: 200px;
+  min-height: 150px;
   float: left;
 }
 
 /* line 33, ../src/screen.scss */
 #search-area {
   width: 200px;
-  min-height: 200px;
   float: left;
   margin: 40px 0px 0px 270px;
 }
 
-/* line 39, ../src/screen.scss */
+/* line 38, ../src/screen.scss */
 #content {
   margin: 0 auto;
 }
 
-/* line 42, ../src/screen.scss */
+/* line 41, ../src/screen.scss */
 #main-area {
   float: left;
   width: 700px;
@@ -118,7 +117,7 @@ body {
   margin: 40px 60px 0 60px;
 }
 
-/* line 48, ../src/screen.scss */
+/* line 47, ../src/screen.scss */
 #friends-area {
   float: left;
   width: 200px;
@@ -127,31 +126,31 @@ body {
   text-align: left;
 }
 
-/* line 55, ../src/screen.scss */
+/* line 54, ../src/screen.scss */
 .friend {
   width: 200px;
   padding: 5px 0;
   line-height: 30px;
 }
 
-/* line 61, ../src/screen.scss */
+/* line 60, ../src/screen.scss */
 .status {
   float: left;
   padding-right: 10px;
 }
 
-/* line 64, ../src/screen.scss */
+/* line 63, ../src/screen.scss */
 form {
   width: 430px;
   margin: 0 auto;
 }
 
-/* line 68, ../src/screen.scss */
+/* line 67, ../src/screen.scss */
 .field {
   width: 430px;
 }
 
-/* line 71, ../src/screen.scss */
+/* line 70, ../src/screen.scss */
 .narrow-field {
   width: 300px;
   margin-left: 133px;
@@ -159,17 +158,17 @@ form {
   margin-top: 20px;
 }
 
-/* line 77, ../src/screen.scss */
+/* line 76, ../src/screen.scss */
 .logo-drop {
-  padding-top: 200px;
+  padding-top: 150px;
 }
 
-/* line 80, ../src/screen.scss */
+/* line 79, ../src/screen.scss */
 p {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 84, ../src/screen.scss */
+/* line 83, ../src/screen.scss */
 h1 {
   color: #37383f;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
@@ -177,47 +176,47 @@ h1 {
   margin: 40px 0 0 120px;
 }
 
-/* line 90, ../src/screen.scss */
+/* line 89, ../src/screen.scss */
 .quote {
   color: #cccccc;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
   font-size: 10pt;
 }
 
-/* line 95, ../src/screen.scss */
+/* line 94, ../src/screen.scss */
 a {
   font-weight: bold;
   color: #2d3070;
   text-decoration: none;
 }
 
-/* line 100, ../src/screen.scss */
+/* line 99, ../src/screen.scss */
 label, input {
   float: left;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 104, ../src/screen.scss */
+/* line 103, ../src/screen.scss */
 label {
   display: block;
-  line-height: 50px;
+  line-height: 52px;
   margin-right: 4px;
   width: 130px;
 }
 
-/* line 110, ../src/screen.scss */
+/* line 109, ../src/screen.scss */
 .terms {
   width: 270px;
   display: block;
   line-height: 26px;
 }
 
-/* line 115, ../src/screen.scss */
+/* line 114, ../src/screen.scss */
 .cancel {
   padding: 0 10px;
 }
 
-/* line 117, ../src/screen.scss */
+/* line 116, ../src/screen.scss */
 input {
   width: 285px;
   height: 40px;
@@ -226,7 +225,7 @@ input {
   font-size: 18px;
 }
 
-/* line 125, ../src/screen.scss */
+/* line 124, ../src/screen.scss */
 .button {
   display: block;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
@@ -250,7 +249,7 @@ input {
   box-shadow: 2px 2px 3px #ccc;
 }
 
-/* line 147, ../src/screen.scss */
+/* line 146, ../src/screen.scss */
 .button:hover {
   float: left;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#989eff));
@@ -258,7 +257,7 @@ input {
   text-shadow: none;
 }
 
-/* line 153, ../src/screen.scss */
+/* line 152, ../src/screen.scss */
 .button:active, .button:focus {
   float: left;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#5e63bd), to(#5e63bd));
@@ -268,13 +267,13 @@ input {
   color: #181a3d;
 }
 
-/* line 161, ../src/screen.scss */
+/* line 160, ../src/screen.scss */
 input[type="checkbox"] {
   width: 18px;
   height: 14px;
 }
 
-/* line 165, ../src/screen.scss */
+/* line 164, ../src/screen.scss */
 input[type="submit"] {
   width: 100px;
   font-size: 14px;
