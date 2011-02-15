@@ -10,50 +10,55 @@
 </head>
 <body>
 	<div id="bg">
-	<!--
-		<span class="dblue">Dark</span>
-		<span class="blue">Blue</span>
-		<span class="green">Green</span>
-		<span class="red">Red</span>
-		<span class="black">Black</span>
-	-->
-		<div id="header">
-			<img src="images/logo.png" class="logo-drop" />
-			<h1> Already registered? <a href="index.html"> Log in </a> </h1>
-	  	</div>
-		<div id="content">
-		  	<form action="index.html" method="post">
-
-			    <div class="field">
-				<label for="name">Name</label>
-				<input type="text" name="name" id="name"></input>
-			    </div>
-			    <div class="field">
-				<label for="email">Email</label>
-				<input type="text" name="email" id="email"></input>
-			    </div>
-			    <div class="field">
-				<label for="email2">Email (again)</label>
-				<input type="text" name="email2" id="email2"></input>
-			    </div>
-		            <div class="field">
-				<label for="password">Password</label>
-				<input type="password" name="password" id="password"></input>
-			    </div>
-			    <div class="field">
-				<label for="password2">Password (again)</label>
-				<input type="password" name="password2" id="password2"></input>
-			    </div>
-			    <div class="narrow-field">
-			    	<input type="checkbox" name="terms" id="terms"></input>
-				<label class="terms">I Accept <a href="terms.txt" target="_blank">terms and conditions</a></label>
-			    </div>
-			    <div class="narrow-field">
-				<a class="button" href="#" id="submit">Register</a>
-				<label for="submit"> or <a class="cancel" href="#" >Cancel</a></label>
-			    </div>
-		  	</form>	
-		</div>
+		<div id="wrapper">
+			<div id="header">
+				<div class="logo-area">
+					<img src="images/logo.png"/>
+					<p class="quote"> "Track or be tracked, but do it with TrackerApp." </p>
+				</div>
+				<div class="search-area">
+					<form action="index.html" method="post">
+					    <div class="field">
+						<input type="text" name="search" value="Search"></input>
+					    </div>
+				</div>
+		  	</div>
+			<div id="content">
+				<h1> Already registered? <a href="login.html"> Log in here </a> </h1>
+			  	<div class="centered">
+					<form action="index.html" method="post">
+					    <div class="field">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name"></input>
+					    </div>
+					    <div class="field">
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email"></input>
+					    </div>
+					    <div class="field">
+						<label for="email2">Email (again)</label>
+						<input type="text" name="email2" id="email2"></input>
+					    </div>
+					    <div class="field">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password"></input>
+					    </div>
+					    <div class="field">
+						<label for="password2">Password (again)</label>
+						<input type="password" name="password2" id="password2"></input>
+					    </div>
+					    <div class="narrow-field">
+					    	<input type="checkbox" name="terms" id="terms"></input>
+						<label class="terms">I Accept <a href="terms.txt" target="_blank">terms and conditions</a></label>
+					    </div>
+					    <div class="narrow-field">
+						<a class="button" href="#" id="submit">Register</a>
+						<label for="submit"> or <a class="cancel" href="#" >Cancel</a></label>
+					    </div>
+			  		</form>
+				</div>	
+			</div>
+		</div>	
 	</div>
 </body>
 </html> 	

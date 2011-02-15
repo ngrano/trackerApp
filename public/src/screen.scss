@@ -22,15 +22,18 @@ body {
 @include linear-gradient(color-stops(white, #dddddd));
 	min-height: 1080px;
 }
+#wrapper {
+	width: 1060px;
+}
 #header {
-	margin:0 0 20px 0;
-	}
-#logo-area {
+	margin-top: 20px;
+}
+.logo-area {
 	width:550px;
 	min-height:150px;
 	float:left;
 }
-#search-area {
+.search-area {
 	width:200px;
 	float:left;
 	margin:40px 0px 0px 270px;
@@ -59,23 +62,10 @@ body {
 
 	.status {
 	float:left;
-	padding-right: 10px;}
-form {
-	width:430px;
-	margin:0 auto;
-}
-.field {
-	width:430px;
-}
-.narrow-field {
-	width:300px;
-	margin-left:133px;
-	float:left;
-	margin-top:20px;
-}
-.logo-drop {
-	padding-top:150px;
-}
+	padding-right: 10px;
+	}
+.center {}
+
 p {
 	font-family: $basic_font;
 }
@@ -84,7 +74,6 @@ h1 {
 	 color: $Track_darkblue;
 	 font-family: $basic_font;
 	 font-size: 14pt;
-	 margin: 40px 0 0 120px;
 }
 .quote {
 	color: #cccccc;
@@ -97,30 +86,24 @@ a {
 	text-decoration: none;
 }
 label, input { 
-	float: left;
 	font-family: $basic_font;
 }
-label{
-	display: block;
-    	line-height: 52px;
-    	margin-right: 4px;
-    	width: 130px;
-}
-.terms {
-	width:270px;
-	display:block;
-	line-height:26px;
-}
-.cancel {
-	padding: 0 10px;}
-input {
-	width:285px;
-	height:40px;
-	margin-top: 6px;
-	padding-left:5px;
-	font-size:18px;
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .button{
 	display: block;
 	font-family: $basic_font;
