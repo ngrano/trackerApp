@@ -1,12 +1,16 @@
 TrackerApp::Application.routes.draw do
-  devise_for :users
-  resources :users
+  devise_for :users, :controllers => { :sessions => "sessions" } do
+    get "sign_in", :to => "devise/sessions#new"
+    get "sign_up", :to => "devise/registrations#new"
+  end
 
   namespace :api do
     namespace :v1 do
       resources :locations, :only => :create
     end
   end
+
+  resource :session
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
