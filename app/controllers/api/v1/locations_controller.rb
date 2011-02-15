@@ -6,7 +6,7 @@ class Api::V1::LocationsController < Api::BaseController
 
     respond_to do |format|
       if @location.save
-        format.json { render :json => @location }
+        format.json { render :json => @location, :status => :ok }
       else
         format.json { render :json => @location.errors, :status => :unprocessable_entity }
       end
