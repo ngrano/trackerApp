@@ -37,17 +37,17 @@ body {
 }
 #content {
 	margin: 0 auto;	
+	width: 900px;
+	min-height: 800px;
+	float:left;
 }
 #main-area {
 	float:left;
-	width:700px;
-	min-height:800px;
 	margin: 40px 60px 0 60px;
 }
 #friends-area{
 	float:left;
 	width:200px;
-	min-height:800px;
 	margin-top:40px;
 	text-align:left;
 }

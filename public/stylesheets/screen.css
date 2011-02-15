@@ -107,21 +107,21 @@ body {
 /* line 38, ../src/screen.scss */
 #content {
   margin: 0 auto;
+  width: 900px;
+  min-height: 800px;
+  float: left;
 }
 
-/* line 41, ../src/screen.scss */
+/* line 44, ../src/screen.scss */
 #main-area {
   float: left;
-  width: 700px;
-  min-height: 800px;
   margin: 40px 60px 0 60px;
 }
 
-/* line 47, ../src/screen.scss */
+/* line 48, ../src/screen.scss */
 #friends-area {
   float: left;
   width: 200px;
-  min-height: 800px;
   margin-top: 40px;
   text-align: left;
 }
