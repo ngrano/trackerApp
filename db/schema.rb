@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110201142244) do
+ActiveRecord::Schema.define(:version => 20110208165602) do
 
   create_table "friendships", :force => true do |t|
     t.integer  "user_id"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20110201142244) do
     t.datetime "updated_at"
   end
 
-  add_index "locations", ["user_id"], :name => "index_locations_on_user_id", :unique => true
+  add_index "locations", ["user_id"], :name => "index_locations_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
