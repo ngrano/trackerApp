@@ -1,17 +1,20 @@
 <h1>Sign in</h1>
-
+<h2>Dont have an account? Dont worry, just  <%= render :partial => "devise/shared/links" %></h2>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+  <p class="first-row"><%= f.label :email %></p>
+  <p><%= f.text_field :email %></p>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+  <p><%= f.label :password %></p>
+  <p><%= f.password_field :password %></p>
 
   <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+    <div class="narrow">
+	<p><%= f.label :remember_me %>
+    	<%= f.check_box :remember_me %></p>
+   </div>
   <% end -%>
 
-  <p><%= f.submit "Sign in" %></p>
+  <p class="right"><%= f.submit "Sign in" %></p>
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+

@@ -111,7 +111,9 @@ h2 {
 	text-align: left;
 }
 #error_explanation {    
-   	-moz-border-radius: 10px 10px 10px 10px;
+   	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; 
     	background-color: #E7BCBC;
    	border: 2px solid #C86464;
     	text-align: center;
@@ -132,7 +134,13 @@ h2 {
     	font-size: 14px;
     	color: #923434;
 }
-
+.narrow {
+	width:250px;
+	margin-left: 213px;
+}
+.narrow label  {
+	line-height:12px;
+}
 a {
 	font-weight:bold;
 	color: #2d3070;
@@ -144,7 +152,7 @@ label, input {
 }
 label {
 	float: left;
-	line-height: 32px;
+	line-height: 40px;
  	padding-right: 10px;
 	width: 200px;
 	text-align: right;
@@ -155,11 +163,10 @@ input {
 input[type="text"], input[type="password"] {
 	height:35px;
 }
-
-input[type="checkbox"] {	
-	width:18px;
-	height:14px;
+input[type="checkbox"] {
+	height: 50px;
 }
+
 input[type="submit"] {
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;

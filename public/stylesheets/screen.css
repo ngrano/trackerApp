@@ -213,7 +213,9 @@ h2 {
 
 /* line 113, ../src/screen.scss */
 #error_explanation {
-  -moz-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   background-color: #E7BCBC;
   border: 2px solid #C86464;
   text-align: center;
@@ -221,7 +223,7 @@ h2 {
   padding: 10px 0 10px 0;
 }
 
-/* line 121, ../src/screen.scss */
+/* line 123, ../src/screen.scss */
 #error_explanation ul li {
   background: url("/images/error.png") no-repeat scroll 0 0 transparent;
   color: #C86464;
@@ -233,51 +235,61 @@ h2 {
   text-align: left;
 }
 
-/* line 131, ../src/screen.scss */
+/* line 133, ../src/screen.scss */
 #error_explanation h2 {
   font-size: 14px;
   color: #923434;
 }
 
-/* line 136, ../src/screen.scss */
+/* line 137, ../src/screen.scss */
+.narrow {
+  width: 250px;
+  margin-left: 213px;
+}
+
+/* line 141, ../src/screen.scss */
+.narrow label {
+  line-height: 12px;
+}
+
+/* line 144, ../src/screen.scss */
 a {
   font-weight: bold;
   color: #2d3070;
   text-decoration: none;
 }
 
-/* line 141, ../src/screen.scss */
+/* line 149, ../src/screen.scss */
 label, input {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
   margin-top: 10px;
 }
 
-/* line 145, ../src/screen.scss */
+/* line 153, ../src/screen.scss */
 label {
   float: left;
-  line-height: 32px;
+  line-height: 40px;
   padding-right: 10px;
   width: 200px;
   text-align: right;
 }
 
-/* line 152, ../src/screen.scss */
+/* line 160, ../src/screen.scss */
 input {
   width: 200px;
 }
 
-/* line 155, ../src/screen.scss */
+/* line 163, ../src/screen.scss */
 input[type="text"], input[type="password"] {
   height: 35px;
 }
 
-/* line 159, ../src/screen.scss */
+/* line 166, ../src/screen.scss */
 input[type="checkbox"] {
-  width: 18px;
-  height: 14px;
+  height: 50px;
 }
 
-/* line 163, ../src/screen.scss */
+/* line 170, ../src/screen.scss */
 input[type="submit"] {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
