@@ -110,6 +110,29 @@ h2 {
 .left {
 	text-align: left;
 }
+#error_explanation {    
+   	-moz-border-radius: 10px 10px 10px 10px;
+    	background-color: #E7BCBC;
+   	border: 2px solid #C86464;
+    	text-align: center;
+	margin-top: 10px;
+	padding: 10px 0 10px 0;
+}
+#error_explanation ul li {
+    	 background: url("/images/error.png") no-repeat scroll 0 0 transparent;
+	 color: #C86464;
+	 font-size: 10px;
+	 height: 10px;
+	 margin-left: 150px;
+	 margin-top: 5px;
+	 padding: 2px 2px 2px 20px;
+	 text-align: left;
+}
+#error_explanation h2 {
+    	font-size: 14px;
+    	color: #923434;
+}
+
 a {
 	font-weight:bold;
 	color: #2d3070;
