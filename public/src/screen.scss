@@ -16,7 +16,6 @@ $Track_black
 
 body {
 	margin: 0 auto;
-	text-align:center;
 	@include linear-gradient(color-stops(white, #dddddd));
 	min-height: 1080px;
 }
@@ -41,7 +40,8 @@ body {
 	width: 1160px;
 	min-height: 800px;
 	float:left;
-	margin-top: 100px;
+	margin-top: 50px;
+	text-align: center;
 }
 #main-area {
 	float:left;
@@ -67,12 +67,10 @@ body {
     	text-align: right;
    	width: 710px;
 }
-.form {
-	width: 1160px;
-	margin-top: 50px;
-}
-.narrow {
-	width: 1160px;
+form {
+	width: 460px;
+	text-align: right;
+	margin: 0 auto;
 }
 p {
 	font-family: $basic_font;
@@ -99,6 +97,19 @@ h2 {
 	color: $grey;
 	font-family: $basic_font;
 }
+.first-row {
+	margin-top: 20px;
+}
+.centered {
+	text-align:center;
+	margin: 0 auto;
+}
+.right {
+	text-align: right;
+}
+.left {
+	text-align: left;
+}
 a {
 	font-weight:bold;
 	color: #2d3070;
@@ -106,11 +117,18 @@ a {
 }
 label, input { 
 	font-family: $basic_font;
+	margin-top:10px;
 }
 label {
-	padding-right:10px;
+	float: left;
+	line-height: 32px;
+ 	padding-right: 10px;
+	width: 200px;
+	text-align: right;
 }
-
+input {
+	width:200px;
+}
 input[type="text"], input[type="password"] {
 	height:35px;
 }

@@ -74,44 +74,44 @@ a img {
 /* line 17, ../src/screen.scss */
 body {
   margin: 0 auto;
-  text-align: center;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
   background-image: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%);
   background-image: linear-gradient(top, #ffffff 0%, #dddddd 100%);
   min-height: 1080px;
 }
 
-/* line 23, ../src/screen.scss */
+/* line 22, ../src/screen.scss */
 #wrapper {
   margin: 0 auto;
   width: 1160px;
 }
 
-/* line 27, ../src/screen.scss */
+/* line 26, ../src/screen.scss */
 #header {
   margin-top: 0 auto;
 }
 
-/* line 30, ../src/screen.scss */
+/* line 29, ../src/screen.scss */
 .logo-area {
   width: 550px;
   min-height: 150px;
   float: left;
 }
 
-/* line 35, ../src/screen.scss */
+/* line 34, ../src/screen.scss */
 .search-area {
   width: 200px;
   float: left;
   margin: 40px 0px 0px 270px;
 }
 
-/* line 40, ../src/screen.scss */
+/* line 39, ../src/screen.scss */
 #content {
   width: 1160px;
   min-height: 800px;
   float: left;
-  margin-top: 100px;
+  margin-top: 50px;
+  text-align: center;
 }
 
 /* line 46, ../src/screen.scss */
@@ -148,81 +148,108 @@ body {
 }
 
 /* line 70, ../src/screen.scss */
-.form {
-  width: 1160px;
-  margin-top: 50px;
+form {
+  width: 460px;
+  text-align: right;
+  margin: 0 auto;
 }
 
-/* line 74, ../src/screen.scss */
-.narrow {
-  width: 1160px;
-}
-
-/* line 77, ../src/screen.scss */
+/* line 75, ../src/screen.scss */
 p {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 80, ../src/screen.scss */
+/* line 78, ../src/screen.scss */
 h1, h2 {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 84, ../src/screen.scss */
+/* line 82, ../src/screen.scss */
 h1 {
   color: #37383f;
   font-size: 18pt;
   margin-bottom: 20px;
 }
 
-/* line 89, ../src/screen.scss */
+/* line 87, ../src/screen.scss */
 h2 {
   color: #cccccc;
   font-size: 12pt;
 }
 
-/* line 93, ../src/screen.scss */
+/* line 91, ../src/screen.scss */
 .quote {
   color: #cccccc;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
   font-size: 10pt;
 }
 
-/* line 98, ../src/screen.scss */
+/* line 96, ../src/screen.scss */
 .grey {
   color: #cccccc;
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
 }
 
-/* line 102, ../src/screen.scss */
+/* line 100, ../src/screen.scss */
+.first-row {
+  margin-top: 20px;
+}
+
+/* line 103, ../src/screen.scss */
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 107, ../src/screen.scss */
+.right {
+  text-align: right;
+}
+
+/* line 110, ../src/screen.scss */
+.left {
+  text-align: left;
+}
+
+/* line 113, ../src/screen.scss */
 a {
   font-weight: bold;
   color: #2d3070;
   text-decoration: none;
 }
 
-/* line 107, ../src/screen.scss */
+/* line 118, ../src/screen.scss */
 label, input {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
+  margin-top: 10px;
 }
 
-/* line 110, ../src/screen.scss */
+/* line 122, ../src/screen.scss */
 label {
+  float: left;
+  line-height: 32px;
   padding-right: 10px;
+  width: 200px;
+  text-align: right;
 }
 
-/* line 114, ../src/screen.scss */
+/* line 129, ../src/screen.scss */
+input {
+  width: 200px;
+}
+
+/* line 132, ../src/screen.scss */
 input[type="text"], input[type="password"] {
   height: 35px;
 }
 
-/* line 118, ../src/screen.scss */
+/* line 136, ../src/screen.scss */
 input[type="checkbox"] {
   width: 18px;
   height: 14px;
 }
 
-/* line 122, ../src/screen.scss */
+/* line 140, ../src/screen.scss */
 input[type="submit"] {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
