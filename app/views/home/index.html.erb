@@ -1,11 +1,13 @@
-<div id="main-area">
-				<img src="images/map.png" alt="map" />
-			</div>
-			<div id="friends-area">	
-				<div class="friend">
-					<a href="#"><img src="images/online.png" class="status" /></a> <p>online friend</p>
-				</div>
-				<div class="friend">
-					<a href="#"><img src="images/offline.png" class="status" /></a><p>offline friend</p>
-				</div>
-			</div>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'googlemap.js' %>
+<% end %>
+
+<div id="main-area" data-apikey="f3ed4cf89fee80bd2918615cade79f4f232cf596" style="width: 650px; height: 600px;"></div>
+<div id="friends-area">	
+	<div class="friend">
+		<a href="#"><img src="images/online.png" class="status" /></a> <p>online friend</p>
+	</div>
+	<div class="friend">
+		<a href="#"><img src="images/offline.png" class="status" /></a><p>offline friend</p>
+	</div>
+</div>
