@@ -41,11 +41,13 @@ class User < ActiveRecord::Base
   end
 
   def self.friends_locations(user)
-    scope = Location.select('locations.*, users.first_name, users.last_name')
-    scope = scope.joins('inner join users on users.id = locations.user_id')
-    scope = scope.joins('inner join friendships on friendships.friend_id = users.id')
+    scope = Location.select('locations.*, u.id, u.first_name, u.last_name')
+    scope = scope.joins('inner join users u on u.id = locations.user_id')
+    scope = scope.joins('inner join friendships on friendships.friend_id = u.id')
     scope = scope.where('friendships.user_id = ?', user.id)
     scope = scope.where('friendships.approved = ?', true)
+    scope = scope.order('locations.created_at DESC')
+    scope = scope.group('u.id')
   end
 
   def generate_api_key
