@@ -245,34 +245,39 @@ h2 {
 
 /* line 139, ../src/screen.scss */
 .narrow {
-  margin-left: 160px;
-  width: 206px;
+  float: left;
+  margin-left: 180px;
+  margin-top: 15px;
+  width: 211px;
 }
 
-/* line 143, ../src/screen.scss */
+/* line 145, ../src/screen.scss */
 .narrow label {
-  line-height: 12px;
+  float: left;
+  line-height: 34px;
+  margin-top: 0;
+  width: 120px;
 }
 
-/* line 146, ../src/screen.scss */
+/* line 151, ../src/screen.scss */
 .spacing {
   padding: 0 3px;
 }
 
-/* line 149, ../src/screen.scss */
+/* line 154, ../src/screen.scss */
 a {
   font-weight: bold;
   color: #2d3070;
   text-decoration: none;
 }
 
-/* line 154, ../src/screen.scss */
+/* line 159, ../src/screen.scss */
 label, input {
   font-family: "sans-serif", "tahoma", "Verdana", "Geneva", "Arial";
   margin-top: 10px;
 }
 
-/* line 158, ../src/screen.scss */
+/* line 163, ../src/screen.scss */
 label {
   float: left;
   line-height: 40px;
@@ -281,22 +286,24 @@ label {
   text-align: right;
 }
 
-/* line 165, ../src/screen.scss */
+/* line 170, ../src/screen.scss */
 input {
   width: 200px;
 }
 
-/* line 168, ../src/screen.scss */
+/* line 173, ../src/screen.scss */
 input[type="text"], input[type="password"] {
   height: 35px;
 }
 
-/* line 171, ../src/screen.scss */
+/* line 176, ../src/screen.scss */
 input[type="checkbox"] {
-  height: 50px;
+  float: left;
+  height: 46px;
+  width: 157px;
 }
 
-/* line 175, ../src/screen.scss */
+/* line 182, ../src/screen.scss */
 input[type="submit"] {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -304,6 +311,7 @@ input[type="submit"] {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#989eff), to(#5e63bd));
   background-image: -moz-linear-gradient(#989eff, #5e63bd);
   color: #2d3070;
+  margin-top: 25px;
   text-shadow: 1px 1px 2px #fff;
   -moz-box-shadow: 2px 2px 3px #ccc;
   -webkit-box-shadow: 2px 2px 3px #ccc;
