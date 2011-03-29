@@ -16,6 +16,15 @@
 				<img src="/images/logo.png" alt="logo" />
 				<p class="quote"> "Track or be tracked, but do it with TrackerApp." </p>
 			</div>
+    <div class="login-area">  
+      <% if user_signed_in? %>  
+        Signed in as <%= current_user.email %>.  
+        <%= link_to "Sign out", destroy_user_session_path %>  
+      <% else %>  
+        <%= link_to "Sign up", new_user_registration_path %> or  
+        <%= link_to "Sign in", new_user_session_path %>  
+      <% end %>  
+    </div>  
 			<div class="search-area">
 				<form action="login.html" method="post">
 					<input type="text" class="grey" value="Search"></input>
