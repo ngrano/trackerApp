@@ -3,10 +3,10 @@
 $(function() {
   var map;
   var mainarea = $('#main-area');
-  var prevDataChecksum;
   var friendLocations = [];
-  var markers = [];
   var iterator = 0;
+  var mapInitialized = false;
+  var interval = 2000;
 
   function initializeMap() {
     var vaasa = new google.maps.LatLng(63.09525, 21.61627);
@@ -33,8 +33,6 @@ $(function() {
         return;
       }
 
-      clearLocationData();
-
       for (var i in data) {
         addFriendLocation(data[i].location);
       }
@@ -43,48 +41,122 @@ $(function() {
     });
   }
 
-  function clearOverlays() {
-    for (var i = 0; i < markers.length; i++) {
-      markers[i].setMap(null);
+  function clearOverlays(location) {
+    for (var i = 0; i < location.markers.length; i++) {
+      location.markers[i].setMap(null);
     }
 
-    markers = [];
+    location.markers = [];
   }
 
-  function clearLocationData() {
-    clearOverlays();
-    friendLocations = [];
-    iterator = 0;
+  function clearLocationData(location) {
+    clearOverlays(location);
+    location.position = null;
   }
 
   function addFriendLocation(location) {
+    var id = parseInt(location.user_id);
     var latitude = parseFloat(location.latitude);
     var longtitude = parseFloat(location.longtitude);
     var title = location.first_name + ' ' + location.last_name
 
-    var location = new google.maps.LatLng(latitude, longtitude);
-    friendLocations.push([title, location]);
+    var position = new google.maps.LatLng(latitude, longtitude);
+    var friendLocation = findOrInitializeFriendLocation(id);
+
+    if (!positionChanged(friendLocation.position, position)) {
+      friendLocation.positionChanged = false;
+      return;
+    }
+
+    clearLocationData(friendLocation);
+    friendLocation.title = title;
+    friendLocation.position = position;
+    friendLocation.positionChanged = true;
+  }
+
+  function positionChanged(oldPosition, newPosition) {
+    if (!oldPosition && newPosition) {
+      return true;
+    }
+
+    return newPosition && !newPosition.equals(oldPosition);
+  }
+
+  function findOrInitializeFriendLocation(id) {
+    var friendLocation = findFriendLocation(id);
+
+    if (friendLocation) {
+      return friendLocation;
+    }
+
+    friendLocation = {};
+    friendLocation['location'] = {
+      user_id: id,
+      positionChanged: true,
+      title: '',
+      position: null,
+      markers: []
+    }
+
+    friendLocations.push(friendLocation);
+
+    return friendLocation['location'];
+  }
+
+  function findFriendLocation(id) {
+    for (var i = 0; i < friendLocations.length; i++) {
+      if (friendLocations[i]['location'].user_id == id) {
+        return friendLocations[i]['location'];
+      }
+    }
+
+    return null;
   }
 
   function drop() {
     for (var i = 0, len = friendLocations.length; i < len; i++) {
-      addMarker();
+      var location = friendLocations[i]['location'];
+
+      if (!mapInitialized) {
+        setTimeout(addMarker(location), i * 200);
+      } else {
+        addMarker(location);
+      }
     }
   }
 
-  function addMarker() {
+  function getLocationObject(index) {
+    return friendsLocations[index]['location']
+  }
+
+  function addMarker(location) {
+    if (!location.positionChanged) {
+      return;
+    }
+
     var marker = new google.maps.Marker({
-      position: friendLocations[iterator][1],
-      map: map,
+      position: location.position,
       draggable: false,
-      title: friendLocations[iterator][0]
+      title: location.title
     });
 
-    markers.push(marker);
-    iterator++;
+    // Use drop effect when page is loaded
+    if (!mapInitialized) {
+      marker.setAnimation(google.maps.Animation.DROP);
+    }
+
+    marker.setMap(map);
+    location.markers.push(marker);
+
+    if (!mapInitialized) iterator++;
+
+    if (!mapInitialized && iterator == friendLocations.length - 1) {
+      mapInitialized = true;
+      iterator = 0;
+    }
   }
 
   initializeMap();
 
-  setInterval(updateFriendLocations, 2000);
+  setInterval(updateFriendLocations, interval);
 });
