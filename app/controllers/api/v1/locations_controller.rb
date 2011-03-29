@@ -12,4 +12,12 @@ class Api::V1::LocationsController < Api::BaseController
       end
     end
   end
+
+  def friends
+    @locations = User.friends_locations(@user)
+
+    respond_to do |format|
+      format.json { render :json => @locations, :status => :ok }
+    end
+  end
 end
