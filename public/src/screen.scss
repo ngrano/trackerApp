@@ -28,8 +28,9 @@ body {
 }
 .logo-area {
 	width:550px;
-	min-height:150px;
+	min-height: 150px;
 	float:left;
+	margin-left: 60px;
 }
 .search-area {
 	width:200px;
@@ -68,7 +69,7 @@ body {
    	width: 710px;
 }
 form {
-	width: 460px;
+	width: 390px;
 	text-align: right;
 	margin: 0 auto;
 }
@@ -85,13 +86,14 @@ h1 {
 	margin-bottom: 20px;
 }
 h2 {
-	color: $grey;
+	color: $Track_dark;
 	font-size: 12pt;
 }
 .quote {
 	color: $grey;
 	font-family: $basic_font;
 	font-size:10pt;
+	margin-left:35px;
 }
 .grey {
 	color: $grey;
@@ -135,11 +137,14 @@ h2 {
     	color: #923434;
 }
 .narrow {
-	width:250px;
-	margin-left: 213px;
+	margin-left: 160px;
+   	width: 206px;
 }
 .narrow label  {
 	line-height:12px;
+}
+.spacing {
+	padding:0 3px;
 }
 a {
 	font-weight:bold;
@@ -154,7 +159,7 @@ label {
 	float: left;
 	line-height: 40px;
  	padding-right: 10px;
-	width: 200px;
+	width: 165px;
 	text-align: right;
 }
 input {
