@@ -294,16 +294,17 @@ input {
 /* line 173, ../src/screen.scss */
 input[type="text"], input[type="password"] {
   height: 35px;
+  padding: 0 0 0 5px;
 }
 
-/* line 176, ../src/screen.scss */
+/* line 177, ../src/screen.scss */
 input[type="checkbox"] {
   float: left;
   height: 46px;
   width: 157px;
 }
 
-/* line 182, ../src/screen.scss */
+/* line 183, ../src/screen.scss */
 input[type="submit"] {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
