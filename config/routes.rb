@@ -6,7 +6,9 @@ TrackerApp::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :locations, :only => [:create, :index]
+      resources :locations do
+        get 'friends', :on => :collection
+      end
     end
   end
 

@@ -27,9 +27,28 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name
 
   before_save :generate_api_key
+
+  def add_friend_and_approve!(friend)
+    friends << friend
+    friendship_request = friend.friendship_requests.last
+
+    raise "Friendship request is nil, could not approve!" if friendship_request.nil?
+
+    friendship_request.approve!
+  end
+
+  def self.friends_locations(user)
+    scope = Location.select('locations.*, u.id, u.first_name, u.last_name')
+    scope = scope.joins('inner join users u on u.id = locations.user_id')
+    scope = scope.joins('inner join friendships on friendships.friend_id = u.id')
+    scope = scope.where('friendships.user_id = ?', user.id)
+    scope = scope.where('friendships.approved = ?', true)
+    scope = scope.order('locations.created_at DESC')
+    scope = scope.group('u.id')
+  end
 
   def generate_api_key
     if self.email_changed?
