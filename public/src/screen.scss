@@ -24,7 +24,8 @@ body {
 	width: 1160px;
 }
 #header {
-	margin-top: 0 auto;
+	margin-top: 0;
+	@include clearfix;
 }
 .logo-area {
 	width:550px;
