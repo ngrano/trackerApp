@@ -13,6 +13,7 @@ $Track_black
 */
 
 @import "base";
+@import "compass/css3/box-shadow";
 
 body {
 	margin: 0 auto;
@@ -48,6 +49,7 @@ body {
 .apikey { font-family: monospace; font-size: 13px; }
 
 #login-form, #register-form, #edituser-form { width: 300px; margin: 0 auto; }
+#googlemap { border: 5px solid #ccc; @include box-shadow(#333); }
 
 #main-area {
 	float:left;

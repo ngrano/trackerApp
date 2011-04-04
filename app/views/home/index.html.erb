@@ -2,7 +2,9 @@
   <%= javascript_include_tag 'googlemap.js' %>
 <% end %>
 
-<div id="main-area" data-apikey="<%= current_user.apikey %>" style="width: 650px; height: 600px;"></div>
+<div id="main-area" data-apikey="<%= current_user.apikey %>" style="width: 650px; height: 600px;">
+  <div style="width: 650px; height: 600px;" id="googlemap"></div>
+</div>
 <div id="friends-area">	
 	<div class="friend">
 		<a href="#"><img src="images/online.png" class="status" /></a> <p>online friend</p>

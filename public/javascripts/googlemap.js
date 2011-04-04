@@ -2,7 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 $(function() {
   var map;
-  var mainarea = $('#main-area');
+  var mainarea = $('#googlemap');
   var friendLocations = [];
   var iterator = 0;
   var mapInitialized = false;
@@ -17,7 +17,7 @@ $(function() {
     }
 
     map = new google.maps.Map(
-      document.getElementById('main-area'), options);
+      document.getElementById('googlemap'), options);
 
     updateFriendLocations();
   }
