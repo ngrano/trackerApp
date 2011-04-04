@@ -43,9 +43,9 @@ class User < ActiveRecord::Base
   def self.friends_locations(user)
     scope = Location.select('locations.*, u.id, u.first_name, u.last_name')
     scope = scope.joins('inner join users u on u.id = locations.user_id')
-    scope = scope.joins('inner join friendships on friendships.friend_id = u.id')
-    scope = scope.where('friendships.user_id = ?', user.id)
-    scope = scope.where('friendships.approved = ?', true)
+    scope = scope.joins('inner join friendships on friendships.friend_id = u.id or friendships.user_id = u.id')
+    scope = scope.where('friendships.user_id = ? or friendships.friend_id = ?', user.id, user.id)
+    scope = scope.where('friendships.approved = ? and locations.user_id != ?', true, user.id)
     scope = scope.order('locations.created_at DESC')
     scope = scope.group('u.id')
   end
