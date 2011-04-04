@@ -43,8 +43,10 @@ body {
 	min-height: 800px;
 	float:left;
 	margin-top: 50px;
-	text-align: center;
 }
+
+#login-form, #register-form { width: 300px; margin: 0 auto; }
+
 #main-area {
 	float:left;
 	margin: 40px 60px 0 60px;
@@ -66,19 +68,18 @@ body {
 	}
 .field {
 	margin-top: 20px;
-    	text-align: right;
+    text-align: right;
    	width: 710px;
 }
-form {
-	width: 390px;
-	text-align: right;
-	margin: 0 auto;
-}
+
 p {
 	font-family: $basic_font;
+	margin-bottom: 10px;
 }
+
 h1,h2 {
 	font-family: $basic_font;
+	margin-bottom: 20px;
 }
 
 h1 {
@@ -109,9 +110,11 @@ h2 {
 }
 .right {
 	text-align: right;
+	@include clearfix;
 }
 .left {
 	text-align: left;
+	@include clearfix;
 }
 #error_explanation {    
    	-moz-border-radius: 10px;
@@ -161,24 +164,10 @@ label, input {
 	font-family: $basic_font;
 	margin-top:10px;
 }
-label {
-	float: left;
-	line-height: 40px;
- 	padding-right: 10px;
-	width: 165px;
-	text-align: right;
-}
-input {
-	width:200px;
-}
+
 input[type="text"], input[type="password"] {
-	height:35px;
-	padding: 0 0 0 5px;
-}
-input[type="checkbox"] {
-	float: left;
-   	height: 46px;
-   	width: 157px;
+	font-size: 17px;
+	padding: 5px;
 }
 
 input[type="submit"] {
@@ -201,4 +190,11 @@ input[type="submit"] {
 	font-family: $basic_font;
 	font-size: 12pt;
 	height:40px;
+}
+
+input[type="submit"]:hover {
+  color: #293D1B;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#99E764), to(#60963D));
+	background-image: -moz-linear-gradient(#99E764, #60963D);
+	border-color: #192510;
 }
