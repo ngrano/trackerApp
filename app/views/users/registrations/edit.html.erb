@@ -1,3 +1,5 @@
+<div id="edituser-form">
+
 <h1>Edit <%= resource_name.to_s.humanize %></h1>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
@@ -21,11 +23,12 @@
   <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></p>
 
-  <p><%= f.submit "Update" %></p>
+  <p>
+    <%= f.label :apikey, "Your API key:" %><br /><br />
+    <span class="apikey"><%= current_user.apikey %></span>
+  </p>
+
+  <p><%= f.submit "Update" %> or <%= link_to "Cancel", root_path %></p>
 <% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
-
-<%= link_to "Back", :back %>
+</div>

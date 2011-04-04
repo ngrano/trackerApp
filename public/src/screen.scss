@@ -45,7 +45,9 @@ body {
 	margin-top: 50px;
 }
 
-#login-form, #register-form { width: 300px; margin: 0 auto; }
+.apikey { font-family: monospace; font-size: 13px; }
+
+#login-form, #register-form, #edituser-form { width: 300px; margin: 0 auto; }
 
 #main-area {
 	float:left;
