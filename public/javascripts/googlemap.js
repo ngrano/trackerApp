@@ -7,6 +7,7 @@ $(function() {
   var iterator = 0;
   var mapInitialized = false;
   var interval = 2000;
+  var gravatarSize = 30;
 
   function initializeMap() {
     var vaasa = new google.maps.LatLng(63.09525, 21.61627);
@@ -72,6 +73,10 @@ $(function() {
     friendLocation.title = title;
     friendLocation.position = position;
     friendLocation.positionChanged = true;
+
+    var gravatarUrl =
+        'http://gravatar.com/avatar/' + location.apikey + '.png?s=' + gravatarSize;
+    friendLocation.gravatarUrl = gravatarUrl;
   }
 
   function positionChanged(oldPosition, newPosition) {
@@ -94,6 +99,7 @@ $(function() {
       user_id: id,
       positionChanged: true,
       title: '',
+      gravatarUrl: null,
       position: null,
       markers: []
     }
@@ -141,6 +147,10 @@ $(function() {
       draggable: false,
       title: location.title
     });
+
+    if (location.gravatarUrl) {
+      marker.setIcon(location.gravatarUrl);
+    }
 
     // Use drop effect when page is loaded
     if (!mapInitialized) {
