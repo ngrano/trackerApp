@@ -118,10 +118,10 @@ $(function() {
       var location = friendLocations[i]['location'];
 
       if (!mapInitialized) {
-        console.log("Map not initialized!");
+        log("Map not initialized!");
         setTimeout(addMarker(location), i * 200);
       } else {
-        console.log("map initialized");
+        log("map initialized");
         addMarker(location);
       }
     }
@@ -155,6 +155,12 @@ $(function() {
     if (!mapInitialized && iterator == friendLocations.length - 1) {
       mapInitialized = true;
       iterator = 0;
+    }
+  }
+
+  function log(msg) {
+    if (typeof console != "undefined") {
+      console.log(msg);
     }
   }
 
