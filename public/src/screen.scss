@@ -29,15 +29,30 @@ body {
 	@include clearfix;
 }
 .logo-area {
-	width:550px;
-	min-height: 150px;
-	float:left;
-	margin-left: 60px;
+	float: left;
+   	margin-left: 0;
+  	min-height: 150px;
+   	width: 580px;
 }
+.login-area {
+	float: left;
+    	font-family: Arial;
+   	line-height: 24px;
+    	margin-right: 20px;
+    	margin-top: 40px;
+    	text-align: right;
+    	width: 295px;
+}
+	.login-area img {
+		display: block;
+ 	   	float: left;
+    		padding-right: 25px;
+    		padding-top: 0;
+	}
 .search-area {
-	width:200px;
-	float:left;
-	margin:40px 0px 0px 270px;
+	float: left;
+    	margin: 35px 0 0 25px;
+    	width: 200px;
 }
 #content {
 	width: 1160px;
@@ -56,9 +71,9 @@ body {
 	margin: 0 60px 0 60px;
 }
 #friends-area{
-	float:left;
-	margin: 0 0 0 90px;
-	text-align:left;
+	float: left;
+    	margin: 0 0 0 130px;
+    	text-align: left;
 }
 	.friend {
 	width:200px;
