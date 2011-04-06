@@ -32,28 +32,67 @@ body {
 	float: left;
    	margin-left: 0;
   	min-height: 150px;
-   	width: 580px;
+   	width: 760px;
 }
 .login-area {
 	float: left;
     	font-family: Arial;
    	line-height: 24px;
-    	margin-right: 20px;
-    	margin-top: 40px;
-    	text-align: right;
-    	width: 295px;
+	margin: 35px 0 0 25px;
+    	text-align: left;
+    	width: 285px;
 }
 	.login-area img {
 		display: block;
- 	   	float: left;
-    		padding-right: 25px;
-    		padding-top: 0;
+    		float: right;
+    		padding-left: 6px;
 	}
-.search-area {
+ul.nav, ul.nav ul {
 	float: left;
-    	margin: 35px 0 0 25px;
-    	width: 200px;
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0 5px 0 0;
 }
+ul.nav li {
+	float:left;
+}
+ul.nav li ul {
+	position: absolute;
+	left: -999em;
+	background-color: #fff;
+	border:1px solid #ccc;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 20px;
+}
+ul.nav li ul li {
+	padding: 0 5px;
+}
+.nav li:hover ul {
+	left:auto;
+}
+ul.nav a {
+	display: block;
+    	float: right;
+    	padding-left: 5px;
+}
+.search-area {
+	-moz-box-shadow: 0 0 10px #888888;
+	-webkit-box-shadow: 0 0 10px #888888;
+	box-shadow: 0 0 10px #888888;
+    	background-color: #E5E5E5;
+    	border-bottom: 1px solid #AAAAAA;
+    	clear: both;
+    	display: block;
+    	height: 30px;
+    	margin: 0 0 30px;
+    	padding: 6px 20px 12px 0;
+    	text-align: right;
+}
+	.search-area input {
+	margin: 0;
+	}
 #content {
 	width: 1160px;
 	min-height: 800px;
@@ -65,15 +104,18 @@ body {
 
 #login-form, #register-form, #edituser-form { width: 300px; margin: 0 auto; }
 #googlemap { border: 5px solid #ccc; @include box-shadow(#333); }
-
+#login-form h2 {
+	width: 350px;
+	color: #777;
+}
 #main-area {
 	float:left;
 	margin: 0 60px 0 60px;
 }
 #friends-area{
 	float: left;
-    	margin: 0 0 0 130px;
     	text-align: left;
+	margin-left: 10px;
 }
 	.friend {
 	width:200px;
@@ -109,6 +151,7 @@ h1 {
 h2 {
 	color: $Track_dark;
 	font-size: 12pt;
+ 	
 }
 .quote {
 	color: $grey;
@@ -204,11 +247,12 @@ input[type="submit"] {
 	text-align: center;
 	text-decoration: none;
 	border: 2px solid #2d3070;
-	line-height: 42px;
+	line-height: 34px;
 	width:100px;
 	font-family: $basic_font;
 	font-size: 12pt;
 	height:40px;
+	vertical-align: middle;
 }
 
 input[type="submit"]:hover {

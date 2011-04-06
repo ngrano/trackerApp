@@ -10,25 +10,37 @@
   <%= csrf_meta_tag %>
 </head>
 <body <%= yield :body_tag %>>
-	<div id="wrapper">
-		<div id="header">
-			<div class="logo-area">
-				<img src="/images/logo.png" alt="logo" />
-				<p class="quote"> "Track or be tracked, but do it with TrackerApp." </p>
-			</div>
-    <div class="login-area">  
-      <% if user_signed_in? %>
-        <%= image_tag avatar_url(current_user) %>  
-        Signed in as <%= current_user.first_name + " " + current_user.last_name %> 
-        <%= link_to "Edit profile", edit_user_registration_path(@user) %> | 
-        <%= link_to "Sign out", destroy_user_session_path %>  
-      <% end %>  
-    </div>  
 			<div class="search-area">
 				<form action="login.html" method="post">
 					<input type="text" class="grey" value="Search"></input>
 				</form>
 			</div>
+	<div id="wrapper">
+		<div id="header">
+			<div class="logo-area">
+				<img src="/images/logo.png" alt="logo" />
+				<p class="quote"> "Track or be tracked, but do it with TrackerApp." </p>
+			</div>			
+			<div class="login-area">  
+				<% if user_signed_in? %> 
+				
+
+<ul class="nav">
+	<li>Signed in as <a href="#" class="user"><%= current_user.first_name + " " + current_user.last_name %></a>
+		<ul>
+			<li><%= link_to "Edit profile", edit_user_registration_path(@user) %></li>
+			<li><%= link_to "Sign out", destroy_user_session_path %></li>
+		</ul>
+	</li>
+</ul>
+				
+				
+					
+					
+				<%= image_tag avatar_url(current_user) %>
+				<% end %>  
+			</div>  
+			
 		</div>
 		<div id="content">
 			<%=yield %> 	
