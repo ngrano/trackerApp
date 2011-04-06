@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :remember_me, :name
 
   before_save :generate_api_key
 
@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
   end
 
   def self.friends_locations(user)
-    scope = Location.select('locations.*, u.id, u.first_name, u.last_name')
+    scope = Location.select('locations.*, u.id, u.first_name, u.last_name, u.apikey')
     scope = scope.joins('inner join users u on u.id = locations.user_id')
     scope = scope.joins('inner join friendships on friendships.friend_id = u.id or friendships.user_id = u.id')
     scope = scope.where('friendships.user_id = ? or friendships.friend_id = ?', user.id, user.id)
@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
 
   def generate_api_key
     if self.email_changed?
-      self[:apikey] = Digest::SHA1.hexdigest(self[:email])
+      self[:apikey] = Digest::MD5.hexdigest(self[:email].downcase)
     end
   end
 
