@@ -85,13 +85,23 @@ ul.nav a {
     	border-bottom: 1px solid #AAAAAA;
     	clear: both;
     	display: block;
-    	height: 30px;
+    	height: 50px;
     	margin: 0 0 30px;
-    	padding: 6px 20px 12px 0;
+    	padding-right:20px;
     	text-align: right;
 }
 	.search-area input {
 	margin: 0;
+	float:right;
+	}
+	.search-area p {
+    	height: 42px;
+    	line-height: 36px;
+    	padding: 6px 0 0 20px;
+	}
+	.search-area img {
+	float: left;
+	margin-left:180px;	
 	}
 #content {
 	width: 1160px;
@@ -104,10 +114,6 @@ ul.nav a {
 
 #login-form, #register-form, #edituser-form { width: 300px; margin: 0 auto; }
 #googlemap { border: 5px solid #ccc; @include box-shadow(#333); }
-#login-form h2 {
-	width: 350px;
-	color: #777;
-}
 #main-area {
 	float:left;
 	margin: 0 60px 0 60px;
@@ -140,17 +146,18 @@ p {
 
 h1,h2 {
 	font-family: $basic_font;
-	margin-bottom: 20px;
+    	text-align: center;
 }
 
 h1 {
 	color: $Track_darkblue;
+	margin-bottom: 10px !important;
 	font-size: 18pt;
-	margin-bottom: 20px;
 }
 h2 {
 	color: $Track_dark;
-	font-size: 12pt;
+	font-size: 12px;
+	margin-bottom: 20px !important;
  	
 }
 .quote {
@@ -162,6 +169,8 @@ h2 {
 .grey {
 	color: $grey;
 	font-family: $basic_font;
+	font-size: 12px;
+    	padding-left: 12px;
 }
 .first-row {
 	margin-top: 20px;
@@ -173,10 +182,12 @@ h2 {
 .right {
 	text-align: right;
 	@include clearfix;
+	float: right;
 }
 .left {
 	text-align: left;
 	@include clearfix;
+	float: left;
 }
 #error_explanation {    
    	-moz-border-radius: 10px;
@@ -224,14 +235,19 @@ a {
 }
 label, input { 
 	font-family: $basic_font;
-	margin-top:10px;
+    	font-size: 12px;
+    	margin-top: 2px;
 }
 
 input[type="text"], input[type="password"] {
-	font-size: 17px;
-	padding: 5px;
+	font-size: 16px;
+    	padding: 7px;
 }
-
+input[type="checkbox"]{
+	display: block;
+    	float: left;
+    	margin: 1px 10px 0 0;
+}
 input[type="submit"] {
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -256,8 +272,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  color: #293D1B;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#99E764), to(#60963D));
+  	color: #293D1B;
+  	background-image: -webkit-gradient(linear, left top, left bottom, from(#99E764), to(#60963D));
 	background-image: -moz-linear-gradient(#99E764, #60963D);
 	border-color: #192510;
 }

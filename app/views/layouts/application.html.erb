@@ -10,11 +10,13 @@
   <%= csrf_meta_tag %>
 </head>
 <body <%= yield :body_tag %>>
-			<div class="search-area">
-				<form action="login.html" method="post">
-					<input type="text" class="grey" value="Search"></input>
-				</form>
-			</div>
+	<div class="search-area">
+		<form action="login.html" method="post">
+			<img src="/images/logo_50.png" alt="TrackApp" />
+			<p class="left">Android TrackApp <span class="grey"> Track or be tracked, but do it with TrackerApp</span> </p> 
+			<p class="right"><input type="text" class="grey" value="Search"></input></p>
+		</form>
+	</div>		
 	<div id="wrapper">
 		<div id="header">
 			<div class="logo-area">
